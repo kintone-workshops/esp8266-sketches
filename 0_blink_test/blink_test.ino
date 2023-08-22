@@ -4,12 +4,16 @@ Blink the blue LED on the ESP8266 module
 */
 #define LED 2 //Define blinking LED pin
 void setup() {
+  Serial.begin(9600);
+  Serial.print("If you can read this, you are ready to start hacking with IOT!");
   pinMode(LED, OUTPUT); // Initialize the LED pin as an output
 }
 // the loop function runs over and over again forever
 void loop() {
+  Serial.print("Light ON!");
   digitalWrite(LED, LOW); // Turn the LED on (Note that LOW is the voltage level)
   delay(1000); // Wait for a second
+  Serial.print("Light OFF!");
   digitalWrite(LED, HIGH); // Turn the LED off by making the voltage HIGH
   delay(1000); // Wait for two seconds
 }
