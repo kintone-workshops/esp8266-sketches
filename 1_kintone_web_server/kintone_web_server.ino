@@ -92,7 +92,7 @@ void handlePost() {
   String payload = http.getString();
   Serial.println(payload);
 
-  // Using an IF statement we can choose which HTML to send for each response code. Details are looged to the serial monitor.
+  // Using an IF statement we can choose which HTML to send for each response code. Details are logged to the serial monitor.
   if (responseCode > 0) {
     Serial.print("HTTP Response code: ");
     Serial.println(responseCode);
